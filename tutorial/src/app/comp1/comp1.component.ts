@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule, FormGroup, FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-comp1',
@@ -6,15 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./comp1.component.css']
 })
 export class Comp1Component implements OnInit {
-  testVar: string = 'hex';
+  testVar = 'hex';
+  form;
 
   constructor() { }
 
   ngOnInit() {
+    this.form = new FormGroup({
+      firstName: new FormControl('GGGGGGGG'),
+      lastName: new FormControl('Yang'),
+      level: new FormControl('4')
+    });
   }
 
   submitFunc(value) {
-    console.log(value)
+    console.log(value);
   }
 
 }
