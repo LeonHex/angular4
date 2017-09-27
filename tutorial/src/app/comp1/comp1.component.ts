@@ -13,6 +13,8 @@ export class Comp1Component implements OnInit {
   ngOnInit() {
   }
 
-  
+  submitFunc(value) {
+    console.log(value)
+  }
 
 }
