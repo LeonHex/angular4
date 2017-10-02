@@ -1,15 +1,16 @@
+<!-- <br>
 <input [(ngModel)]='testVar' />
-
+ -->
 
 <form [formGroup]='form' (ngSubmit)='submitFunc(form.value)'>
-    <label for="firstName">First Name:</label><br>
-    <input type="text" name="firstName" placeholder="first name" formControlName='firstName'/><br>
-    <label for="lastName">Last Name:</label><br>
-    <input type="text" name="lastName" placeholder="last name" formControlName='lastName'><br>
-    <select name="dropDown" formControlName='level'>
+  <label for="firstName">First Name:</label><br>
+  <input type="text" name="firstName" placeholder="first name" formControlName='firstName' /><br>
+  <label for="lastName">Last Name:</label><br>
+  <input type="text" name="lastName" placeholder="last name" formControlName='lastName'><br>
+  <select name="dropDown" formControlName='level'>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
     </select><br>
-    <input type="submit" value="submit">
+  <input type="submit" value="submit" [disabled]='!form.valid'>
 </form>

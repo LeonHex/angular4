@@ -1,3 +1,16 @@
-<p>
-  comp2 works!
-</p>
+<h1>This is COMP2!!!</h1>
+
+<form [formGroup]='convertorForm'>
+  <label for="decimal">demical</label>
+  <input type="text" name="decimal" formControlName='decimal' (ngModelChange)='decimalChanged(oldValue, $event)'>
+  <br>
+  <label for="binary">binary</label>
+  <input type="text" name="binary" formControlName='binary' (ngModelChange)='binaryChanged(oldValue, $event)'>
+  <br>
+  <label for="octal">octal</label>
+  <input type="text" name="octal" formControlName='octal' (ngModelChange)='octalChanged(oldValue, $event)'>
+  <br>
+  <label for="hexa">hexa</label>
+  <input type="text" name="hexa" formControlName='hexa' (ngModelChange)='hexaChanged(oldValue, $event)'>
+  <br>
+</form>
