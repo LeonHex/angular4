@@ -1,7 +1,8 @@
 <!-- <br>
 <input [(ngModel)]='testVar' />
  -->
-
+<p class="myTestCss" [@submitClicked]='state'>Look at me!</p>
+<button (click)='buttonClicked()'>Click me!</button>
 <form [formGroup]='form' (ngSubmit)='submitFunc(form.value)'>
   <label for="firstName">First Name:</label><br>
   <input type="text" name="firstName" placeholder="first name" formControlName='firstName' /><br>
